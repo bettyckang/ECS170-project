@@ -14,7 +14,7 @@
 
 ## Section 1: Task Description
 
-We trained a PyTorch multi-layer perceptron (MLP) to classify 28×28 handwritten digit images (784 pixels) into 10 classes, reaching 98.44% test accuracy. Following the course code template, we wrote a CSV data loader, a 10-class MLP and multi-class metrics, then tested how depth, dropout, activation, optimizer, loss and learning rate affect performance.
+We trained a PyTorch multi-layer perceptron (MLP) to classify 28×28 handwritten digit images (784 pixels) into 10 classes, reaching 98.44% test accuracy. Using the course code template, we built the data loader, model and metrics, then tested how six settings affect accuracy. We compare results in percentage **points**, the plain difference between two percentages: 98.25% vs 98.05% is a gap of 0.2 points.
 
 ## Section 2: Model Description
 
@@ -24,7 +24,7 @@ Our model (`Method_MLP`, built on the template's `method` class) is a fully conn
 
 - **Linear layers** compute a weighted sum of their inputs (w·x + b); training learns these weights.
 - **Two hidden layers (256, 128)** build complex patterns from simple ones; a single layer can only draw straight-line boundaries.
-- **ReLU, max(0, x),** adds the non-linearity that stops stacked layers from collapsing into one, and keeps gradients strong.
+- **ReLU, an on/off switch:** each hidden unit keeps its value if it is positive and outputs 0 if it is negative. This simple bend lets stacked layers learn curved shapes like a 3 or an 8; without it, they would act like one straight-line layer.
 - **Dropout (20%)** switches off random hidden units during training, so the model cannot memorize training images.
 - **Output (10 scores):** in training, cross-entropy applies softmax and penalizes wrong digits; at test time, the highest score is the prediction.
 
@@ -36,7 +36,7 @@ The instructor's dataset is pre-split into 60,000 training images (86%) and 10,0
 
 - **A separate test set:** accuracy only means something on unseen images. Ours scores 99.48% on training images but 98.44% on test images.
 - **Most images for training:** handwriting varies widely between writers, and the model learns that variety only from examples.
-- **10,000 test images is enough:** our accuracy's standard error is only about 0.12 points, and each digit makes up 9–11% of both sets.
+- **10,000 test images is enough:** luck in which images land in the test set moves our accuracy by only about 0.12 points, and each digit makes up 9–11% of both sets.
 
 ### 3.2 Detailed Experimental Setups
 
@@ -44,7 +44,7 @@ The instructor's dataset is pre-split into 60,000 training images (86%) and 10,0
 | --- | --- | --- |
 | Input scaling | Pixels ÷ 255 | Keeps inputs in [0, 1], so training is stable |
 | Layers | 784 → 256 → 128 → 10 | Inputs match the pixels, outputs match the digits; two hidden layers reach 98%+ |
-| Activation | ReLU | Learns non-linear patterns; beat tanh and sigmoid by about 0.2 points |
+| Activation | ReLU | Lets the network learn curved shapes; beat tanh and sigmoid by about 0.2 points |
 | Dropout | 0.2, training only | Limits memorizing; removing it cost 0.10 points |
 | Loss | Cross-entropy | Standard for choosing one class; it applies softmax itself, so we removed the template's softmax layer |
 | Optimizer | Adam, learning rate 0.001 | Adapts each weight's step size; a 10× higher rate lost about 1 point |
@@ -96,8 +96,6 @@ Each run changes one setting from the baseline (20 epochs, same seed). Only the 
 - **Depth:** one hidden layer lost 0.08 points but trained twice as fast; three layers gained only 0.01.
 - **Dropout and activation:** removing dropout cost 0.10 points; tanh and sigmoid trailed ReLU by about 0.2.
 - **Optimizer and loss:** RMSprop and the hinge loss tied for best (98.35%). NLL matched cross-entropy exactly, as expected, since they compute the same loss.
-- **GPU (optional 2-6):** Apple's MPS GPU was slower than the CPU (46.4 s vs 26.9 s) for a model this small.
-
 With one seed, gaps under about 0.2 points may be noise. Our final model keeps the baseline settings, trained for 30 epochs.
 
 ## Running the code
