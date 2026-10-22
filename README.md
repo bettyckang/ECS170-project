@@ -1,4 +1,4 @@
-# ECS 170 Fall 2026 Course Project: Stage 2 Report
+# ECS 170 Fall 2026: Stage 2 Report
 
 ## Team Information
 
@@ -42,15 +42,15 @@ The instructor's dataset is pre-split into 60,000 training images (86%) and 10,0
 
 | Setting | Value | Why it matters |
 | --- | --- | --- |
-| Input scaling | Pixels ÷ 255 | Keeps inputs in [0, 1], so training is stable |
-| Layers | 784 → 256 → 128 → 10 | Inputs match the pixels, outputs match the digits; two hidden layers reach 98%+ |
-| Activation | ReLU | Lets the network learn curved shapes; beat tanh and sigmoid by about 0.2 points |
+| Input scaling | Pixels ÷ 255 | Keeps inputs in [0, 1] for stable training |
+| Layers | 784 → 256 → 128 → 10 | Inputs match the pixels; outputs match the 10 digits |
+| Activation | ReLU | Learns curved shapes; beat tanh and sigmoid by 0.2 points |
 | Dropout | 0.2, training only | Limits memorizing; removing it cost 0.10 points |
-| Loss | Cross-entropy | Standard for choosing one class; it applies softmax itself, so we removed the template's softmax layer |
-| Optimizer | Adam, learning rate 0.001 | Adapts each weight's step size; a 10× higher rate lost about 1 point |
-| Batch size, epochs | 128, 30 (reshuffled each epoch) | 469 updates per epoch instead of the template's 1 full batch; loss flattens by epoch 20 |
-| Initialization | PyTorch default (Kaiming-uniform) | Weights scaled to layer size, so signals neither blow up nor vanish |
-| Random seed | 2 | Repeatable runs, so 3.7 compares settings, not luck |
+| Loss | Cross-entropy | Applies softmax itself, so we dropped the template's softmax layer |
+| Optimizer | Adam, learning rate 0.001 | Adapts each weight's step; a 10× higher rate lost 1 point |
+| Batch size / epochs | 128 / 30, reshuffled | 469 updates per epoch, not 1; loss flattens by epoch 20 |
+| Initialization | PyTorch default (Kaiming) | Scaled random start, so signals neither blow up nor vanish |
+| Random seed | 2 | Repeatable runs, so 3.7 compares settings fairly |
 
 ### 3.3 Evaluation Metrics
 
@@ -85,7 +85,7 @@ The final model reaches **98.44% accuracy** on the 10,000 test images, above the
 | Recall | 0.9842 | 0.9844 |
 | F1 score | 0.9842 | 0.9844 |
 
-Per-digit F1 ranges from 0.977 (digit 8) to 0.993 (digit 1). Macro and weighted averages match closely, so no digit is neglected.
+Per-digit F1 ranges from 0.977 (digit 8) to 0.993 (digit 1).
 
 ### 3.7 Ablation Studies
 
