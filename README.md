@@ -6,11 +6,9 @@
 
 | Student | Name | Student ID | Email |
 | --- | --- | --- | --- |
-| 1 | [Name] | [ID] | [Email] |
-| 2 | [Name] | [ID] | [Email] |
-| 3 | [Name] | [ID] | [Email] |
-| 4 | [Name] | [ID] | [Email] |
-| 5 | [Name] | [ID] | [Email] |
+| 1 | Betty Kang | 922129603 | bckang@ucdavis.edu |
+| 2 | Sruthi Sridhar | 923887258 | srusridhar@ucdavis.edu |
+| 3 | Ashwin Charles | 922006548 | ajcharles@ucdavis.edu |
 
 ## Section 1: Task Description
 
