@@ -3,7 +3,7 @@ from local_code.stage_2_code.Method_MLP import Method_MLP
 from local_code.stage_2_code.Result_Saver import Result_Saver
 from local_code.stage_2_code.Setting_Train_Test_Given import Setting_Train_Test_Given
 from local_code.stage_2_code.Evaluate_Metrics import Evaluate_Metrics
-from local_code.stage_2_code.Plot_Learning_Curve import plot_learning_curve
+from local_code.stage_2_code.Plot_Learning_Curve import plot_learning_curve, plot_loss_curve
 import numpy as np
 import torch
 
@@ -42,8 +42,14 @@ if 1:
     setting_obj.print_setup_summary()
     scores = setting_obj.load_run_save_evaluate()
     plot_learning_curve(method_obj.history, '../../result/stage_2_result/MLP_learning_curve.png')
+    plot_loss_curve(method_obj.history, '../../result/stage_2_result/MLP_loss_curve.png')
     print('************ Overall Performance ************')
     for name, value in scores.items():
-        print('MLP ' + name + ': %.4f' % value)
+        print('MLP test ' + name + ': %.4f' % value)
+    # the same metrics on the training set, for the report's train/test comparison (3.6)
+    evaluate_obj.data = {'true_y': method_obj.data['train']['y'],
+                         'pred_y': method_obj.test(method_obj.data['train']['X'])}
+    for name, value in evaluate_obj.evaluate().items():
+        print('MLP train ' + name + ': %.4f' % value)
     print('************ Finish ************')
     # ------------------------------------------------------
