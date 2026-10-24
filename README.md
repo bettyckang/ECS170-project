@@ -27,13 +27,12 @@ ECS170-project/
     └── stage_2_result/                 # Model outputs and generated plots
 ```
 
-## Folder Descriptions
+## Stage 2 Files
 
-### `local_code/`
+### `local_code/stage_2_code/`
 
-Contains the classes and functions used to build, train, and evaluate the model.
+Contains the classes and functions used to build, train, and evaluate the stage 2 model.
 
-- **`base_class/`** — Shared foundational classes used by the project.
 - **`Dataset_Loader.py`** — Reads the training and testing CSV files and extracts image features and labels.
 - **`Method_MLP.py`** — Defines the neural network architecture, training loop, optimizers, and prediction logic.
 - **`Evaluate_Metrics.py`** — Computes classification evaluation metrics.
@@ -41,9 +40,9 @@ Contains the classes and functions used to build, train, and evaluate the model.
 - **`Setting_Train_Test_Given.py`** — Coordinates data loading, training, testing, and evaluation.
 - **`Result_Saver.py`** — Saves model predictions and outputs.
 
-### `script/`
+### `script/stage_2_script/`
 
-Contains the executable scripts used to run the project.
+Contains the executable scripts used to run stage 2 model.
 
 - **`script_mlp.py`** — Runs the main model training and evaluation pipeline.
 - **`script_mlp_experiments.py`** — Runs experiments with different neural network architectures, activation functions, dropout settings, optimizers, learning rates, and loss functions.
@@ -52,7 +51,7 @@ Contains the executable scripts used to run the project.
 
 Currently the `train.csv` and `test.csv` files are not in our data folder, only the toy dataset from stage 1 due to size limitations. See the "How to run" section below
 
-### `result/`
+### `result/stage_2_result/`
 
 Stores outputs generated during training and evaluation, including saved predictions, learning curves, and experiment summaries.
 
