@@ -48,3 +48,30 @@ def plot_learning_curve(history, save_path, title='MLP learning curve'):
     fig.savefig(save_path, dpi=150)
     plt.close(fig)
     print('saved learning curve to', save_path)
+
+
+def plot_loss_curve(history, save_path):
+    # the report's convergence plot (3.5): loss on the full training and testing sets after every epoch
+    epochs, train, test = history['epoch'], history['train_loss_eval'], history['test_loss']
+    fig, ax = plt.subplots(figsize=(8, 4.2))
+    ax.plot(epochs, train, color=SERIES_1, lw=2, marker='o', ms=3.5, label='Training set (60,000 images)')
+    ax.plot(epochs, test, color=SERIES_2, lw=2, marker='o', ms=3.5, label='Testing set (10,000 images)')
+    ax.set_xlim(0.5, epochs[-1] + 0.5)
+    ax.set_ylim(0, max(max(train), max(test)) * 1.06)
+    ax.set_xticks([1] + list(range(5, epochs[-1] + 1, 5)))
+    style_axis(ax, 'Final MLP, loss measured on each full dataset after every epoch', 'Cross-entropy loss')
+    ax.title.set_fontsize(9.5)
+    ax.title.set_color(TEXT_MUTED)
+    ax.set_xlabel('Training epoch', color=TEXT_MUTED)
+    for value in [train[-1], test[-1]]:
+        ax.annotate('%.3f' % value, (epochs[-1], value), xytext=(-2, 8), textcoords='offset points',
+                    ha='right', fontsize=9, color=TEXT)
+    ax.annotate('%.3f' % train[0], (epochs[0], train[0]), xytext=(8, 0), textcoords='offset points',
+                va='center', fontsize=9, color=TEXT)
+    ax.legend(frameon=False, loc='upper right', labelcolor=TEXT)
+    fig.suptitle('Training loss converges from %.3f to %.3f over %d epochs' % (train[0], train[-1], epochs[-1]),
+                 x=0.01, ha='left', fontsize=12, color=TEXT)
+    fig.tight_layout()
+    fig.savefig(save_path, dpi=200)
+    plt.close(fig)
+    print('saved loss curve to', save_path)

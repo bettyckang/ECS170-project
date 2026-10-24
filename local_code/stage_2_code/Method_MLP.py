@@ -47,7 +47,10 @@ class Method_MLP(method, nn.Module):
         layers.append(nn.Linear(prev_dim, output_dim))
         self.layers = nn.Sequential(*layers)
         # filled in during training: one entry per epoch, used for the learning curve plots
-        self.history = {'epoch': [], 'train_loss': [], 'train_accuracy': [], 'test_accuracy': []}
+        # train_loss / train_accuracy are averaged over the epoch's batches (dropout on);
+        # train_loss_eval / test_loss are measured on each full dataset after the epoch (dropout off)
+        self.history = {'epoch': [], 'train_loss': [], 'train_accuracy': [], 'test_accuracy': [],
+                        'train_loss_eval': [], 'test_loss': []}
 
     # it defines the forward propagation function for input x
     # note: unlike the stage 1 template, we return raw logits without a softmax,
@@ -83,6 +86,12 @@ class Method_MLP(method, nn.Module):
         # pixel values are 0-255; scaling them to [0, 1] keeps the gradients well behaved
         return torch.FloatTensor(np.array(X) / 255.0).to(self.device)
 
+    def eval_loss(self, X, y):
+        # loss on a full dataset with dropout off, for the train/test convergence plot
+        nn.Module.train(self, False)
+        with torch.no_grad():
+            return self.compute_loss(self.forward(X), y).item()
+
     # backward error propagation will be implemented by pytorch automatically
     # so we don't need to define the error backpropagation function here
 
@@ -93,6 +102,9 @@ class Method_MLP(method, nn.Module):
         X = self.to_tensor(X)
         y = torch.LongTensor(np.array(y)).to(self.device)
         n = X.shape[0]
+        if test_X is not None:
+            test_X_t = self.to_tensor(test_X)
+            test_y_t = torch.LongTensor(np.array(test_y)).to(self.device)
 
         for epoch in range(self.max_epoch):
             # nn.Module.train() switches dropout on; we call it through nn.Module because
@@ -123,6 +135,8 @@ class Method_MLP(method, nn.Module):
             # test accuracy is only recorded to draw the convergence curve; it is never used to pick the model
             if test_X is not None:
                 self.history['test_accuracy'].append(float(np.mean(self.test(test_X) == np.array(test_y))))
+                self.history['train_loss_eval'].append(self.eval_loss(X, y))
+                self.history['test_loss'].append(self.eval_loss(test_X_t, test_y_t))
             print('Epoch:', epoch + 1, 'Loss: %.4f' % self.history['train_loss'][-1],
                   'Train Accuracy: %.4f' % self.history['train_accuracy'][-1],
                   ('Test Accuracy: %.4f' % self.history['test_accuracy'][-1]) if test_X is not None else '')
