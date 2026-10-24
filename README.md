@@ -47,9 +47,9 @@ Contains the executable scripts used to run stage 2 model.
 - **`script_mlp.py`** — Runs the main model training and evaluation pipeline.
 - **`script_mlp_experiments.py`** — Runs experiments with different neural network architectures, activation functions, dropout settings, optimizers, learning rates, and loss functions.
 
-### `data/`
+### `data/stage_1_data`
 
-Currently the `train.csv` and `test.csv` files are not in our data folder, only the toy dataset from stage 1 due to size limitations. See the "How to run" section below
+Currently we don't have the `train.csv` and `test.csv` files for stage 2 in our data folder, only the toy dataset from stage 1 due to size limitations. See the "How to run" section below
 
 ### `result/stage_2_result/`
 
