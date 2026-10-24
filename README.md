@@ -1,6 +1,6 @@
-# Digit Classification with PyTorch
+# ECS 170 Project
 
-A machine learning project developed for ECS 170 at UC Davis. This project implements a multi-layer perceptron (MLP) using PyTorch to classify handwritten digits from grayscale images.
+This project currently implements stage 2, a multi-layer perceptron (MLP) using PyTorch to classify handwritten digits from grayscale images.
 
 ## Repository Structure
 
@@ -10,11 +10,11 @@ ECS170-project/
 │   ├── base_class/                     # Shared base classes
 │   └── stage_2_code/
 │       ├── Dataset_Loader.py           # Loads training and testing data
-│       ├── Method_MLP.py              # Defines and trains the neural network
-│       ├── Evaluate_Metrics.py        # Evaluates model predictions
-│       ├── Plot_Learning_Curve.py     # Generates training visualizations
+│       ├── Method_MLP.py               # Defines and trains the neural network
+│       ├── Evaluate_Metrics.py         # Evaluates model predictions
+│       ├── Plot_Learning_Curve.py      # Generates training visualizations
 │       ├── Setting_Train_Test_Given.py # Manages training and testing
-│       └── Result_Saver.py            # Saves model predictions
+│       └── Result_Saver.py             # Saves model predictions
 ├── script/
 │   └── stage_2_script/
 │       ├── script_mlp.py               # Runs the main MLP model
@@ -24,7 +24,7 @@ ECS170-project/
 │       ├── train.csv                   # Training dataset
 │       └── test.csv                    # Testing dataset
 └── result/
-    └── stage_2_result/                # Model outputs and generated plots
+    └── stage_2_result/                 # Model outputs and generated plots
 ```
 
 ## Folder Descriptions
@@ -50,12 +50,7 @@ Contains the executable scripts used to run the project.
 
 ### `data/`
 
-Contains the handwritten digit datasets used by the model.
-
-- **`train.csv`** — Training images and corresponding digit labels.
-- **`test.csv`** — Testing images and corresponding digit labels.
-
-Each image consists of 784 pixel values representing a 28 × 28 grayscale image.
+Currently the `train.csv` and `test.csv` files are not in our data folder, only the toy dataset from stage 1 due to size limitations. See the "How to run" section below
 
 ### `result/`
 
