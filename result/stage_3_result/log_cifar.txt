@@ -1,0 +1,42 @@
+************ Start ************
+device: mps
+dataset: CIFAR , method: convolutional neural network , setting: pre-partitioned train test , result: saver , evaluation: accuracy, precision, recall, f1
+loading data...
+train: (50000, 3, 32, 32) test: (10000, 3, 32, 32)
+method running...
+--start training...
+Epoch: 1 Train Loss: 1.0705 Train Accuracy: 0.6213 Test Loss: 1.1060 Test Accuracy: 0.6056
+Epoch: 2 Train Loss: 1.0701 Train Accuracy: 0.6252 Test Loss: 1.1357 Test Accuracy: 0.6062
+Epoch: 3 Train Loss: 0.8014 Train Accuracy: 0.7136 Test Loss: 0.8793 Test Accuracy: 0.6917
+Epoch: 4 Train Loss: 0.8725 Train Accuracy: 0.7030 Test Loss: 0.9836 Test Accuracy: 0.6754
+Epoch: 5 Train Loss: 0.5593 Train Accuracy: 0.8025 Test Loss: 0.7046 Test Accuracy: 0.7536
+Epoch: 6 Train Loss: 0.6564 Train Accuracy: 0.7656 Test Loss: 0.8271 Test Accuracy: 0.7172
+Epoch: 7 Train Loss: 0.5272 Train Accuracy: 0.8096 Test Loss: 0.7264 Test Accuracy: 0.7476
+Epoch: 8 Train Loss: 0.5307 Train Accuracy: 0.8110 Test Loss: 0.7585 Test Accuracy: 0.7461
+Epoch: 9 Train Loss: 0.5039 Train Accuracy: 0.8175 Test Loss: 0.7544 Test Accuracy: 0.7405
+Epoch: 10 Train Loss: 0.3983 Train Accuracy: 0.8584 Test Loss: 0.6967 Test Accuracy: 0.7645
+Epoch: 11 Train Loss: 0.3598 Train Accuracy: 0.8705 Test Loss: 0.6840 Test Accuracy: 0.7686
+Epoch: 12 Train Loss: 0.2670 Train Accuracy: 0.9086 Test Loss: 0.6239 Test Accuracy: 0.7895
+Epoch: 13 Train Loss: 0.2236 Train Accuracy: 0.9276 Test Loss: 0.6132 Test Accuracy: 0.7967
+Epoch: 14 Train Loss: 0.2266 Train Accuracy: 0.9221 Test Loss: 0.6633 Test Accuracy: 0.7939
+Epoch: 15 Train Loss: 0.1725 Train Accuracy: 0.9472 Test Loss: 0.6221 Test Accuracy: 0.8046
+Epoch: 16 Train Loss: 0.1470 Train Accuracy: 0.9571 Test Loss: 0.6158 Test Accuracy: 0.8083
+Epoch: 17 Train Loss: 0.1356 Train Accuracy: 0.9622 Test Loss: 0.6146 Test Accuracy: 0.8093
+Epoch: 18 Train Loss: 0.1262 Train Accuracy: 0.9650 Test Loss: 0.6204 Test Accuracy: 0.8089
+Epoch: 19 Train Loss: 0.1228 Train Accuracy: 0.9669 Test Loss: 0.6212 Test Accuracy: 0.8070
+Epoch: 20 Train Loss: 0.1212 Train Accuracy: 0.9663 Test Loss: 0.6249 Test Accuracy: 0.8077
+--start testing...
+saving results...
+evaluating performance...
+training time: 497.8 s
+saved learning curve to ../../result/stage_3_result/CNN_CIFAR_learning_curve.png
+evaluating performance...
+************ Overall Performance ************
+CNN CIFAR accuracy             train: 0.9663  test: 0.8077
+CNN CIFAR precision_weighted   train: 0.9663  test: 0.8079
+CNN CIFAR recall_weighted      train: 0.9663  test: 0.8077
+CNN CIFAR f1_weighted          train: 0.9663  test: 0.8077
+CNN CIFAR precision_macro      train: 0.9663  test: 0.8079
+CNN CIFAR recall_macro         train: 0.9663  test: 0.8077
+CNN CIFAR f1_macro             train: 0.9663  test: 0.8077
+************ Finish ************
