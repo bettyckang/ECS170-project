@@ -1,0 +1,28 @@
+loading data...
+train: (25000, 256) test: (25000, 256) vocabulary: 28458 words (99.4% found in GloVe)
+************ Start: RNN ************
+device: cpu
+dataset: IMDb movie reviews , method: RNN sentiment classifier , setting: pre-partitioned train test , result: saver , evaluation: accuracy, precision, recall, f1
+method running...
+--start training...
+Epoch: 1 Train Loss: 0.7248 Train Accuracy: 0.6256 Test Loss: 0.7439 Test Accuracy: 0.6130
+Epoch: 2 Train Loss: 0.4254 Train Accuracy: 0.8204 Test Loss: 0.4710 Test Accuracy: 0.7884
+Epoch: 3 Train Loss: 0.4321 Train Accuracy: 0.8060 Test Loss: 0.4884 Test Accuracy: 0.7822
+Epoch: 4 Train Loss: 0.3670 Train Accuracy: 0.8476 Test Loss: 0.4373 Test Accuracy: 0.8162
+Epoch: 5 Train Loss: 0.3534 Train Accuracy: 0.8594 Test Loss: 0.4465 Test Accuracy: 0.8222
+Epoch: 6 Train Loss: 0.2985 Train Accuracy: 0.8828 Test Loss: 0.3893 Test Accuracy: 0.8382
+--start testing...
+saving results...
+evaluating performance...
+training time: 441.1 s
+saved learning curve to ../../result/stage_4_result/classification/RNN_learning_curve.png
+evaluating performance...
+************ Overall Performance ************
+RNN accuracy           train: 0.8828  test: 0.8382
+RNN precision          train: 0.8863  test: 0.8458
+RNN recall             train: 0.8782  test: 0.8272
+RNN f1                 train: 0.8823  test: 0.8364
+RNN precision_macro    train: 0.8828  test: 0.8384
+RNN recall_macro       train: 0.8828  test: 0.8382
+RNN f1_macro           train: 0.8828  test: 0.8382
+************ Finish ************

@@ -1,0 +1,193 @@
+loading data...
+train: (25000, 256) test: (25000, 256) vocabulary: 28458 words (99.4% found in GloVe)
+#### 1. Baseline (LSTM) (baseline) on mps
+Epoch: 1 Batch Loss: 0.5278
+Epoch: 2 Batch Loss: 0.3809
+Epoch: 3 Batch Loss: 0.2905
+Epoch: 4 Batch Loss: 0.2313
+Epoch: 5 Batch Loss: 0.1951
+Epoch: 6 Batch Loss: 0.1757
+evaluating performance...
+evaluating performance...
+train 0.9522 test 0.8744 (121 s)
+#### 2. 2 recurrent layers (num_layers=2) on mps
+Epoch: 1 Batch Loss: 0.5271
+Epoch: 2 Batch Loss: 0.3532
+Epoch: 3 Batch Loss: 0.2654
+Epoch: 4 Batch Loss: 0.2065
+Epoch: 5 Batch Loss: 0.1729
+Epoch: 6 Batch Loss: 0.1537
+evaluating performance...
+evaluating performance...
+train 0.9640 test 0.8721 (160 s)
+#### 3. Bidirectional (bidirectional=True) on mps
+Epoch: 1 Batch Loss: 0.4805
+Epoch: 2 Batch Loss: 0.3356
+Epoch: 3 Batch Loss: 0.2525
+Epoch: 4 Batch Loss: 0.2011
+Epoch: 5 Batch Loss: 0.1643
+Epoch: 6 Batch Loss: 0.1487
+evaluating performance...
+evaluating performance...
+train 0.9656 test 0.8747 (170 s)
+#### 4. Hidden size 64 (hidden_dim=64) on mps
+Epoch: 1 Batch Loss: 0.5094
+Epoch: 2 Batch Loss: 0.3418
+Epoch: 3 Batch Loss: 0.2719
+Epoch: 4 Batch Loss: 0.2195
+Epoch: 5 Batch Loss: 0.1862
+Epoch: 6 Batch Loss: 0.1697
+evaluating performance...
+evaluating performance...
+train 0.9499 test 0.8622 (78 s)
+#### 5. Hidden size 256 (hidden_dim=256) on mps
+Epoch: 1 Batch Loss: 0.5360
+Epoch: 2 Batch Loss: 0.3667
+Epoch: 3 Batch Loss: 0.2867
+Epoch: 4 Batch Loss: 0.2235
+Epoch: 5 Batch Loss: 0.1881
+Epoch: 6 Batch Loss: 0.1698
+evaluating performance...
+evaluating performance...
+train 0.9586 test 0.8816 (165 s)
+#### 6. Frozen GloVe vectors (freeze_embedding=True) on mps
+Epoch: 1 Batch Loss: 0.5560
+Epoch: 2 Batch Loss: 0.4678
+Epoch: 3 Batch Loss: 0.4211
+Epoch: 4 Batch Loss: 0.3850
+Epoch: 5 Batch Loss: 0.3642
+Epoch: 6 Batch Loss: 0.3513
+evaluating performance...
+evaluating performance...
+train 0.8581 test 0.8525 (112 s)
+#### 7. Random word vectors (no GloVe) (pretrained=False) on mps
+Epoch: 1 Batch Loss: 0.5956
+Epoch: 2 Batch Loss: 0.4707
+Epoch: 3 Batch Loss: 0.3896
+Epoch: 4 Batch Loss: 0.3336
+Epoch: 5 Batch Loss: 0.2909
+Epoch: 6 Batch Loss: 0.2737
+evaluating performance...
+evaluating performance...
+train 0.9130 test 0.8587 (278 s)
+#### 8. No word dropout (embedding_dropout=0.0) on mps
+Epoch: 1 Batch Loss: 0.4710
+Epoch: 2 Batch Loss: 0.2861
+Epoch: 3 Batch Loss: 0.2022
+Epoch: 4 Batch Loss: 0.1342
+Epoch: 5 Batch Loss: 0.0947
+Epoch: 6 Batch Loss: 0.0745
+evaluating performance...
+evaluating performance...
+train 0.9803 test 0.8723 (182 s)
+#### 9. Fixed learning rate (no cosine decay) (lr_schedule=None) on mps
+Epoch: 1 Batch Loss: 0.5367
+Epoch: 2 Batch Loss: 0.3729
+Epoch: 3 Batch Loss: 0.2833
+Epoch: 4 Batch Loss: 0.2199
+Epoch: 5 Batch Loss: 0.1782
+Epoch: 6 Batch Loss: 0.1483
+evaluating performance...
+evaluating performance...
+train 0.9797 test 0.8648 (1660 s)
+loading data...
+train: (25000, 256) test: (25000, 256) vocabulary: 28458 words (99.4% found in GloVe)
+#### 10. Keep first 256 words (keep=first) on mps
+Epoch: 1 Batch Loss: 0.5167
+Epoch: 2 Batch Loss: 0.3626
+Epoch: 3 Batch Loss: 0.2778
+Epoch: 4 Batch Loss: 0.2127
+Epoch: 5 Batch Loss: 0.1817
+Epoch: 6 Batch Loss: 0.1622
+evaluating performance...
+evaluating performance...
+train 0.9605 test 0.8681 (202 s)
+loading data...
+train: (25000, 128) test: (25000, 128) vocabulary: 28458 words (99.4% found in GloVe)
+#### 11. Max length 128 words (max_len=128) on mps
+Epoch: 1 Batch Loss: 0.5168
+Epoch: 2 Batch Loss: 0.3545
+Epoch: 3 Batch Loss: 0.2671
+Epoch: 4 Batch Loss: 0.2150
+Epoch: 5 Batch Loss: 0.1792
+Epoch: 6 Batch Loss: 0.1619
+evaluating performance...
+evaluating performance...
+train 0.9600 test 0.8674 (97 s)
+************ classification summary ************
+ #                            experiment  parameters  train_accuracy  test_accuracy  test_precision  test_recall  test_f1  seconds  change_vs_baseline
+ 1                       Baseline (LSTM)     2963818         0.95224        0.87436        0.892214      0.85160 0.871434    121.0              0.0000
+ 2                    2 recurrent layers     3095914         0.96396        0.87212        0.901026      0.83608 0.867339    159.6             -0.0022
+ 3                         Bidirectional     3081834         0.96560        0.87472        0.896009      0.84784 0.871259    169.9              0.0004
+ 4                        Hidden size 64     2888426         0.94988        0.86216        0.911770      0.80192 0.853324     78.0             -0.0122
+ 5                       Hidden size 256     3212906         0.95856        0.88160        0.892399      0.86784 0.879948    165.0              0.0072
+ 6                  Frozen GloVe vectors      118018         0.85808        0.85248        0.834193      0.87984 0.856409    112.3             -0.0219
+ 7        Random word vectors (no GloVe)     2963818         0.91304        0.85872        0.866939      0.84752 0.857120    278.0             -0.0156
+ 8                       No word dropout     2963818         0.98028        0.87228        0.879661      0.86256 0.871026    182.3             -0.0021
+ 9 Fixed learning rate (no cosine decay)     2963818         0.97972        0.86480        0.896108      0.82528 0.859237   1660.4             -0.0096
+10                  Keep first 256 words     2963818         0.96052        0.86812        0.902969      0.82488 0.862160    201.7             -0.0062
+11                  Max length 128 words     2963818         0.95996        0.86744        0.890960      0.83736 0.863329     96.5             -0.0069
+loading data...
+jokes: 1622 longest: 69 tokens vocabulary: 4687 tokens (95.8% found in GloVe)
+#### 1. Baseline (LSTM) (baseline) on mps
+method running...
+--start training...
+Epoch: 10 Batch Loss: 3.2612
+Epoch: 20 Batch Loss: 1.1330
+Epoch: 30 Batch Loss: 0.4044
+Epoch: 40 Batch Loss: 0.3088
+--start generating...
+evaluating performance...
+evaluating performance...
+loss 0.280 next-word acc 0.9653 exact match 0.9964 similarity 0.9990 (257 s)
+#### 2. 1 recurrent layer (num_layers=1) on mps
+method running...
+--start training...
+Epoch: 10 Batch Loss: 1.3623
+Epoch: 20 Batch Loss: 0.3583
+Epoch: 30 Batch Loss: 0.3127
+Epoch: 40 Batch Loss: 0.3232
+--start generating...
+evaluating performance...
+evaluating performance...
+loss 0.284 next-word acc 0.9635 exact match 0.9733 similarity 0.9937 (214 s)
+#### 3. Hidden size 256 (hidden_dim=256) on mps
+method running...
+--start training...
+Epoch: 10 Batch Loss: 3.9508
+Epoch: 20 Batch Loss: 2.1481
+Epoch: 30 Batch Loss: 1.1305
+Epoch: 40 Batch Loss: 0.6110
+--start generating...
+evaluating performance...
+evaluating performance...
+loss 0.546 next-word acc 0.9285 exact match 0.5832 similarity 0.8498 (167 s)
+#### 4. Random word vectors (no GloVe) (pretrained=False) on mps
+method running...
+--start training...
+Epoch: 10 Batch Loss: 2.6441
+Epoch: 20 Batch Loss: 0.4679
+Epoch: 30 Batch Loss: 0.3074
+Epoch: 40 Batch Loss: 0.2917
+--start generating...
+evaluating performance...
+evaluating performance...
+loss 0.265 next-word acc 0.9653 exact match 0.9951 similarity 0.9983 (281 s)
+#### 5. Dropout 0.3 (dropout=0.3) on mps
+method running...
+--start training...
+Epoch: 10 Batch Loss: 4.1715
+Epoch: 20 Batch Loss: 2.8960
+Epoch: 30 Batch Loss: 2.1161
+Epoch: 40 Batch Loss: 1.6249
+--start generating...
+evaluating performance...
+evaluating performance...
+loss 1.320 next-word acc 0.7007 exact match 0.0826 similarity 0.5302 (296 s)
+************ generation summary ************
+ #                     experiment  parameters  train_loss  next_word_accuracy  next_word_f1_weighted  exact_match  similarity  seconds  change_vs_baseline
+ 1                Baseline (LSTM)     6231851    0.279819            0.965348               0.964988     0.996355    0.999036    256.7              0.0000
+ 2              1 recurrent layer     4130603    0.284450            0.963489               0.963101     0.973269    0.993708    214.2             -0.0231
+ 3                Hidden size 256     2566187    0.545813            0.928545               0.928057     0.583232    0.849799    167.1             -0.4131
+ 4 Random word vectors (no GloVe)     6231851    0.264560            0.965275               0.964986     0.995140    0.998299    281.2             -0.0012
+ 5                    Dropout 0.3     6231851    1.320129            0.700663               0.686379     0.082625    0.530237    296.2             -0.9137

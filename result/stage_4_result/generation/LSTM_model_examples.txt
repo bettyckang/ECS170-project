@@ -1,0 +1,68 @@
+LSTM joke generator (saved model LSTM_model.pt): examples (greedy = always the most likely next word)
+
+== Starts that appear in the dataset ==
+START:     what did the
+GENERATED: what did the 0 say to the 8? nice belt.
+CLOSEST TRAINING JOKE (similarity 1.00): what did the 0 say to the 8? nice belt.
+SAMPLED (temperature 0.7): what did the mexican firecheif name his kids... hose a and hose b
+
+START:     why did the
+GENERATED: why did the chicken cross the road? to get away from gordon ramsey
+CLOSEST TRAINING JOKE (similarity 1.00): why did the chicken cross the road? to get away from gordon ramsey
+SAMPLED (temperature 0.7): why did the chef invest in chicken and cow bones? he wanted to buy stock options.
+
+START:     what do you
+GENERATED: what do you call a cow with no legs? ground beef.
+CLOSEST TRAINING JOKE (similarity 1.00): what do you call a cow with no legs? ground beef.
+SAMPLED (temperature 0.7): what do you call a sheep with no legs? a cloud.
+
+START:     did you hear
+GENERATED: did you hear about the two monocles at the party? they made spectacles out of themselves.
+CLOSEST TRAINING JOKE (similarity 1.00): did you hear about the two monocles at the party? they made spectacles out of themselves.
+SAMPLED (temperature 0.7): did you hear about the corduroy pillow? you didn't hear? it made headlines!
+
+START:     how do you
+GENERATED: how do you make a tissue dance? you put a little boogie in it.:)
+CLOSEST TRAINING JOKE (similarity 1.00): how do you make a tissue dance? you put a little boogie in it.:)
+SAMPLED (temperature 0.7): how do you make a tissue dance? you put a little boogie in it.:)
+
+START:     why was the
+GENERATED: why was the tomato blushing? because it saw the salad dressing!
+CLOSEST TRAINING JOKE (similarity 1.00): why was the tomato blushing? because it saw the salad dressing!
+SAMPLED (temperature 0.7): why was the rooster happy after his trip to vegas? he got clucky.
+
+START:     what kind of
+GENERATED: what kind of pants does super mario wear? denim denim denim
+CLOSEST TRAINING JOKE (similarity 1.00): what kind of pants does super mario wear? denim denim denim
+SAMPLED (temperature 0.7): what kind of pants does super mario wear? [ denim, denim, denim. ] (http: / / www. youtube. com / watch? v = c0suimuoshi)
+
+START:     knock knock .
+GENERATED: knock knock... 1. knock knock. whos there? yoda lady. yoda lady who? good job yodeling! 2. knock knock. whos there? well, not your parents, because your parents never knock!
+CLOSEST TRAINING JOKE (similarity 1.00): knock knock... 1. knock knock. whos there? yoda lady. yoda lady who? good job yodeling! 2. knock knock. whos there? well, not your parents, because your parents never knock!
+SAMPLED (temperature 0.7): knock knock... 1. knock knock. whos there? yoda lady. yoda lady who? good job yodeling! 2. knock knock. whos there? well, not your parents, because your parents never knock!
+
+== Made-up starts (not necessarily in the dataset) ==
+START:     my dog is
+GENERATED: my dog is so a bit of mildew--but all it took was a little... scrubbing!!!
+CLOSEST TRAINING JOKE (similarity 0.89): my shower had a bit of mildew--but all it took was a little... scrubbing!!!
+SAMPLED (temperature 0.7): my dog is so a police day on the street and i said, i don't know they told me.
+
+START:     the teacher said
+GENERATED: the teacher said "is a huge pile of snow...... shouldn't ducked.
+CLOSEST TRAINING JOKE (similarity 0.47): i invented a time machine...... next week.
+SAMPLED (temperature 0.7): the teacher said "don't buy a sex when he was a little forced.
+
+START:     i love my
+GENERATED: i love my cat "curiosity". he killed himself... nine times.
+CLOSEST TRAINING JOKE (similarity 0.94): i named my cat "curiosity". he killed himself... nine times.
+SAMPLED (temperature 0.7): i love my cat you just having a job helping it... nine times.
+
+START:     a computer walks
+GENERATED: a computer walks into a bar... he goes up to the barman and says, "have you seen my father in here today?" the barman says, "i don't know, what does he look like?"
+CLOSEST TRAINING JOKE (similarity 0.98): a penguin walks into a bar... he goes up to the barman and says, "have you seen my father in here today?" the barman says, "i don't know, what does he look like?"
+SAMPLED (temperature 0.7): a computer walks into a bar... he goes up to the barman and says, "have you seen my father in here today?" the barman says, "i don't know, what does he look like?"
+
+START:     why do programmers
+GENERATED: why do programmers like their wives a bouqet of ropes instead of flowers?? it's a bouqet of forget-me-knots.
+CLOSEST TRAINING JOKE (similarity 0.92): why do sailors give their wives a bouqet of ropes instead of flowers?? it's a bouqet of forget-me-knots.
+SAMPLED (temperature 0.7): why do programmers like a corny joke in a boat? ba dum ship.

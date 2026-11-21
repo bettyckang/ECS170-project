@@ -1,0 +1,405 @@
+loading data...
+jokes: 1622 longest: 69 tokens vocabulary: 4687 tokens (95.8% found in GloVe)
+************ Start: LSTM ************
+device: mps
+dataset: short jokes , method: LSTM joke generator , setting: train on all jokes, compare generations with them , result: saver , evaluation: next-word metrics, exact match, similarity
+loading data...
+jokes: 1622 longest: 69 tokens vocabulary: 4687 tokens (95.8% found in GloVe)
+method running...
+--start training...
+Epoch: 1 Train Loss: 5.9492 Next-word Accuracy: 0.0965
+Epoch: 2 Train Loss: 5.5154 Next-word Accuracy: 0.1382
+Epoch: 3 Train Loss: 5.0748 Next-word Accuracy: 0.1916
+Epoch: 4 Train Loss: 4.6682 Next-word Accuracy: 0.2270
+Epoch: 5 Train Loss: 4.3591 Next-word Accuracy: 0.2562
+Epoch: 6 Train Loss: 4.0679 Next-word Accuracy: 0.2776
+Epoch: 7 Train Loss: 3.7737 Next-word Accuracy: 0.2997
+Epoch: 8 Train Loss: 3.4952 Next-word Accuracy: 0.3240
+Epoch: 9 Train Loss: 3.2371 Next-word Accuracy: 0.3510
+Epoch: 10 Train Loss: 2.9443 Next-word Accuracy: 0.3832
+Epoch: 11 Train Loss: 2.6761 Next-word Accuracy: 0.4326
+Epoch: 12 Train Loss: 2.4295 Next-word Accuracy: 0.4801
+Epoch: 13 Train Loss: 2.1918 Next-word Accuracy: 0.5233
+Epoch: 14 Train Loss: 1.9753 Next-word Accuracy: 0.5712
+Epoch: 15 Train Loss: 1.7716 Next-word Accuracy: 0.6102
+Epoch: 16 Train Loss: 1.6048 Next-word Accuracy: 0.6444
+Epoch: 17 Train Loss: 1.4311 Next-word Accuracy: 0.6817
+Epoch: 18 Train Loss: 1.2759 Next-word Accuracy: 0.7157
+Epoch: 19 Train Loss: 1.1238 Next-word Accuracy: 0.7456
+Epoch: 20 Train Loss: 1.0050 Next-word Accuracy: 0.7850
+Epoch: 21 Train Loss: 0.8782 Next-word Accuracy: 0.8136
+Epoch: 22 Train Loss: 0.7748 Next-word Accuracy: 0.8408
+Epoch: 23 Train Loss: 0.6835 Next-word Accuracy: 0.8599
+Epoch: 24 Train Loss: 0.6080 Next-word Accuracy: 0.8766
+Epoch: 25 Train Loss: 0.5372 Next-word Accuracy: 0.8909
+Epoch: 26 Train Loss: 0.4835 Next-word Accuracy: 0.9011
+Epoch: 27 Train Loss: 0.4405 Next-word Accuracy: 0.9087
+Epoch: 28 Train Loss: 0.4053 Next-word Accuracy: 0.9142
+Epoch: 29 Train Loss: 0.3777 Next-word Accuracy: 0.9179
+Epoch: 30 Train Loss: 0.3597 Next-word Accuracy: 0.9167
+Epoch: 31 Train Loss: 0.3390 Next-word Accuracy: 0.9222
+Epoch: 32 Train Loss: 0.3242 Next-word Accuracy: 0.9228
+Epoch: 33 Train Loss: 0.3137 Next-word Accuracy: 0.9233
+Epoch: 34 Train Loss: 0.3054 Next-word Accuracy: 0.9237
+Epoch: 35 Train Loss: 0.3047 Next-word Accuracy: 0.9228
+Epoch: 36 Train Loss: 0.2964 Next-word Accuracy: 0.9235
+Epoch: 37 Train Loss: 0.2906 Next-word Accuracy: 0.9207
+Epoch: 38 Train Loss: 0.2846 Next-word Accuracy: 0.9240
+Epoch: 39 Train Loss: 0.2803 Next-word Accuracy: 0.9242
+Epoch: 40 Train Loss: 0.2790 Next-word Accuracy: 0.9243
+--start generating...
+saving results...
+evaluating performance...
+evaluating performance...
+training time: 463.9 s
+saved learning curve to ../../result/stage_4_result/generation/LSTM_learning_curve.png
+************ Overall Performance ************
+LSTM next_word_accuracy               0.9652
+LSTM next_word_precision_weighted     0.9722
+LSTM next_word_recall_weighted        0.9652
+LSTM next_word_f1_weighted            0.9651
+LSTM next_word_precision_macro        0.9438
+LSTM next_word_recall_macro           0.9312
+LSTM next_word_f1_macro               0.9324
+LSTM exact_match                      0.9915
+LSTM similarity                       0.9974
+LSTM joke generator: examples (greedy = always the most likely next word)
+
+== Starts that appear in the dataset ==
+START:     what did the
+GENERATED: what did the 0 say to the 8? nice belt.
+CLOSEST TRAINING JOKE (similarity 1.00): what did the 0 say to the 8? nice belt.
+SAMPLED (temperature 0.7): what did the mexican firecheif name his kids... hose a and hose b
+
+START:     why did the
+GENERATED: why did the chicken cross the road? to get away from gordon ramsey
+CLOSEST TRAINING JOKE (similarity 1.00): why did the chicken cross the road? to get away from gordon ramsey
+SAMPLED (temperature 0.7): why did the paper follow the pencil? because it led the way! i'm on a roll here! this is fun! ~ skip
+
+START:     what do you
+GENERATED: what do you call a cow with no legs? ground beef.
+CLOSEST TRAINING JOKE (similarity 1.00): what do you call a cow with no legs? ground beef.
+SAMPLED (temperature 0.7): what do you call a woman with one leg? eileen
+
+START:     did you hear
+GENERATED: did you hear about the guy who fell into an upholstery machine? now he's fully recovered.
+CLOSEST TRAINING JOKE (similarity 1.00): did you hear about the guy who fell into an upholstery machine? now he's fully recovered.
+SAMPLED (temperature 0.7): did you hear about the scarecrow who won the nobel prize? he was outstanding in his field. from: http: / / www. dadlaughs. com
+
+START:     how do you
+GENERATED: how do you make a computer your best friend? you buy it a nice bunch of software and get it loaded!
+CLOSEST TRAINING JOKE (similarity 1.00): how do you make a computer your best friend? you buy it a nice bunch of software and get it loaded!
+SAMPLED (temperature 0.7): how do you make a tissue dance? you put a little boogie in it.:)
+
+START:     why was the
+GENERATED: why was the tomato blushing? because it saw the salad dressing!
+CLOSEST TRAINING JOKE (similarity 1.00): why was the tomato blushing? because it saw the salad dressing!
+SAMPLED (temperature 0.7): why was the rooster happy after his trip to vegas? he got clucky.
+
+START:     what kind of
+GENERATED: what kind of pants does super mario wear? denim denim denim
+CLOSEST TRAINING JOKE (similarity 1.00): what kind of pants does super mario wear? denim denim denim
+SAMPLED (temperature 0.7): what kind of pants does super mario wear? [ denim, denim, denim. ] (http: / / www. youtube. com / watch? v = c0suimuoshi)
+
+START:     knock knock .
+GENERATED: knock knock... 1. knock knock. whos there? yoda lady. yoda lady who? good job yodeling! 2. knock knock. whos there? well, not your parents, because your parents never knock!
+CLOSEST TRAINING JOKE (similarity 1.00): knock knock... 1. knock knock. whos there? yoda lady. yoda lady who? good job yodeling! 2. knock knock. whos there? well, not your parents, because your parents never knock!
+SAMPLED (temperature 0.7): knock knock... 1. knock knock. whos there? yoda lady. yoda lady who? good job yodeling! 2. knock knock. whos there? well, not your parents, because your parents never knock!
+
+== Made-up starts (not necessarily in the dataset) ==
+START:     my dog is
+GENERATED: my dog is an legs... i was watching doing with it.
+CLOSEST TRAINING JOKE (similarity 0.44): like most people my age... i'm 27.
+SAMPLED (temperature 0.7): my dog is an joke why couldn't be clean shop to get around for everything. it's head and found it before... i guess it's wet his pants in nearly every nation in the world.
+
+START:     the teacher said
+GENERATED: the teacher said he was in a boat and the doctor with the boat. the bartender says, "what is this, a joke?"
+CLOSEST TRAINING JOKE (similarity 0.52): a priest, a minister, and a rabbit walk into a bar...... and the bartender says, "what is this, a joke?"
+SAMPLED (temperature 0.7): the teacher said he was in a boat and the doctor in the end of my life. "i'm making a little forced.
+
+START:     i love my
+GENERATED: i love my cat "curiosity". he killed himself... nine times.
+CLOSEST TRAINING JOKE (similarity 0.94): i named my cat "curiosity". he killed himself... nine times.
+SAMPLED (temperature 0.7): i love my girl's morning travel of soap. he always has the same suit.
+
+START:     a computer walks
+GENERATED: a computer walks into a bar... he goes up to the barman and says, "have you seen my father in here today?" the barman says, "i don't know, what does he look like?"
+CLOSEST TRAINING JOKE (similarity 0.98): a penguin walks into a bar... he goes up to the barman and says, "have you seen my father in here today?" the barman says, "i don't know, what does he look like?"
+SAMPLED (temperature 0.7): a computer walks into a bar... he goes up to the barman and says, "have you seen my father in here today?" the barman says, "i don't know, what does he look like?"
+
+START:     why do programmers
+GENERATED: why do programmers like their toenails red? so they can hide in cherry trees. you ever seen an elephant in a cherry tree? * then it's working *.
+CLOSEST TRAINING JOKE (similarity 0.94): why do elephants paint their toenails red? so they can hide in cherry trees. you ever seen an elephant in a cherry tree? * then it's working *.
+SAMPLED (temperature 0.7): why do programmers like to ride elevators? it lifts their spirits.
+
+************ Finish ************
+loading data...
+jokes: 1622 longest: 69 tokens vocabulary: 4687 tokens (95.8% found in GloVe)
+************ Start: RNN ************
+device: cpu
+dataset: short jokes , method: RNN joke generator , setting: train on all jokes, compare generations with them , result: saver , evaluation: next-word metrics, exact match, similarity
+loading data...
+jokes: 1622 longest: 69 tokens vocabulary: 4687 tokens (95.8% found in GloVe)
+method running...
+--start training...
+Epoch: 1 Train Loss: 6.4540 Next-word Accuracy: 0.0615
+Epoch: 2 Train Loss: 6.2267 Next-word Accuracy: 0.1174
+Epoch: 3 Train Loss: 6.0591 Next-word Accuracy: 0.1234
+Epoch: 4 Train Loss: 5.8079 Next-word Accuracy: 0.1578
+Epoch: 5 Train Loss: 5.6531 Next-word Accuracy: 0.1534
+Epoch: 6 Train Loss: 5.3848 Next-word Accuracy: 0.1903
+Epoch: 7 Train Loss: 5.2869 Next-word Accuracy: 0.2034
+Epoch: 8 Train Loss: 5.0835 Next-word Accuracy: 0.2017
+Epoch: 9 Train Loss: 4.9623 Next-word Accuracy: 0.2356
+Epoch: 10 Train Loss: 4.7845 Next-word Accuracy: 0.2395
+Epoch: 11 Train Loss: 4.6861 Next-word Accuracy: 0.2580
+Epoch: 12 Train Loss: 4.5232 Next-word Accuracy: 0.2695
+Epoch: 13 Train Loss: 4.4268 Next-word Accuracy: 0.2777
+Epoch: 14 Train Loss: 4.3135 Next-word Accuracy: 0.2865
+Epoch: 15 Train Loss: 4.1736 Next-word Accuracy: 0.2871
+Epoch: 16 Train Loss: 4.0422 Next-word Accuracy: 0.3014
+Epoch: 17 Train Loss: 3.8571 Next-word Accuracy: 0.3131
+Epoch: 18 Train Loss: 3.6912 Next-word Accuracy: 0.3191
+Epoch: 19 Train Loss: 3.4705 Next-word Accuracy: 0.3336
+Epoch: 20 Train Loss: 3.2776 Next-word Accuracy: 0.3515
+Epoch: 21 Train Loss: 3.0362 Next-word Accuracy: 0.3816
+Epoch: 22 Train Loss: 2.8191 Next-word Accuracy: 0.4066
+Epoch: 23 Train Loss: 2.6337 Next-word Accuracy: 0.4278
+Epoch: 24 Train Loss: 2.4095 Next-word Accuracy: 0.4681
+Epoch: 25 Train Loss: 2.2628 Next-word Accuracy: 0.4850
+Epoch: 26 Train Loss: 2.1165 Next-word Accuracy: 0.5160
+Epoch: 27 Train Loss: 1.9786 Next-word Accuracy: 0.5442
+Epoch: 28 Train Loss: 1.8306 Next-word Accuracy: 0.5724
+Epoch: 29 Train Loss: 1.7644 Next-word Accuracy: 0.5824
+Epoch: 30 Train Loss: 1.6747 Next-word Accuracy: 0.6050
+Epoch: 31 Train Loss: 1.6172 Next-word Accuracy: 0.6187
+Epoch: 32 Train Loss: 1.5201 Next-word Accuracy: 0.6396
+Epoch: 33 Train Loss: 1.4534 Next-word Accuracy: 0.6542
+Epoch: 34 Train Loss: 1.3956 Next-word Accuracy: 0.6688
+Epoch: 35 Train Loss: 1.3907 Next-word Accuracy: 0.6669
+Epoch: 36 Train Loss: 1.3284 Next-word Accuracy: 0.6834
+Epoch: 37 Train Loss: 1.2853 Next-word Accuracy: 0.6906
+Epoch: 38 Train Loss: 1.2359 Next-word Accuracy: 0.7019
+Epoch: 39 Train Loss: 1.2119 Next-word Accuracy: 0.7104
+Epoch: 40 Train Loss: 1.2048 Next-word Accuracy: 0.7084
+--start generating...
+saving results...
+evaluating performance...
+evaluating performance...
+training time: 629.7 s
+saved learning curve to ../../result/stage_4_result/generation/RNN_learning_curve.png
+************ Overall Performance ************
+RNN next_word_accuracy               0.7290
+RNN next_word_precision_weighted     0.7492
+RNN next_word_recall_weighted        0.7290
+RNN next_word_f1_weighted            0.7223
+RNN next_word_precision_macro        0.8609
+RNN next_word_recall_macro           0.8614
+RNN next_word_f1_macro               0.8456
+RNN exact_match                      0.0729
+RNN similarity                       0.4314
+RNN joke generator: examples (greedy = always the most likely next word)
+
+== Starts that appear in the dataset ==
+START:     what did the
+GENERATED: what did the 0 say to the 8? nice belt.
+CLOSEST TRAINING JOKE (similarity 1.00): what did the 0 say to the 8? nice belt.
+SAMPLED (temperature 0.7): what did the 0 say to the 8? let's make a snowman!
+
+START:     why did the
+GENERATED: why did the strawberry cry? because it saw the salad dressing
+CLOSEST TRAINING JOKE (similarity 0.80): why did the tomato turned red? because it saw the salad dressing
+SAMPLED (temperature 0.7): why did the strawberry get back in the world... why he got a band-def language.
+
+START:     what do you
+GENERATED: what do you call a cow with no legs? ground beef!
+CLOSEST TRAINING JOKE (similarity 1.00): what do you call a cow with no legs? ground beef!
+SAMPLED (temperature 0.7): what do you call a cow with no legs? ground beef.
+
+START:     did you hear
+GENERATED: did you hear about the kidnapping recently? the goatherd woke him up.
+CLOSEST TRAINING JOKE (similarity 1.00): did you hear about the kidnapping recently? the goatherd woke him up.
+SAMPLED (temperature 0.7): did you hear about the kidnapping recently? the goatherd woke him up the street
+
+START:     how do you
+GENERATED: how do you get pikachu on the bus? because he was a bear with the street..............................................
+CLOSEST TRAINING JOKE (similarity 0.42): first post and an original how much does a chinese elephant weigh?.................. wonton
+SAMPLED (temperature 0.7): how do you know you put the right joke in the right thread? he was a little shellfish.
+
+START:     why was the
+GENERATED: why was the rooster happy after his trip to vegas? he wanted to dye his hair as well. bond replied "dye another day.
+CLOSEST TRAINING JOKE (similarity 0.62): why was the rooster happy after his trip to vegas? he got clucky.
+SAMPLED (temperature 0.7): why was the rooster happy after his trip to vegas? he had a dickens of a while arm but it was a patriot blaze
+
+START:     what kind of
+GENERATED: what kind of pants does super mario wear? [ denim, denim, denim, the man says "" i'm at the other, and the other is a bit of the mop.
+CLOSEST TRAINING JOKE (similarity 0.49): what kind of pants does super mario wear? denim denim denim
+SAMPLED (temperature 0.7): what kind of music does super mario wear? [ denim, denim, denim!!
+
+START:     knock knock .
+GENERATED: knock knock. who's there? doorbell technician.
+CLOSEST TRAINING JOKE (similarity 1.00): knock knock. who's there? doorbell technician.
+SAMPLED (temperature 0.7): knock knock. and the 9 years. i don't take the line of a alphabet... i guess it have a mile between the first and last letters.
+
+== Made-up starts (not necessarily in the dataset) ==
+START:     my dog is
+GENERATED: my dog is a bit, for the other is the end of the sail of the fast work............................................
+CLOSEST TRAINING JOKE (similarity 0.40): first post and an original how much does a chinese elephant weigh?.................. wonton
+SAMPLED (temperature 0.7): my dog is a bit of mildew---choo.
+
+START:     the teacher said
+GENERATED: the teacher said he was going to be merely a pigment of summer.
+CLOSEST TRAINING JOKE (similarity 0.43): a man once thought he'd discovered a new primary color but it proved to be merely a pigment of his imagination.
+SAMPLED (temperature 0.7): the teacher said he did the world say to the other, "and is the cost of sex change some plant? he was delighted.
+
+START:     i love my
+GENERATED: i love my slaves like i like my coffee free.
+CLOSEST TRAINING JOKE (similarity 0.91): i like my slaves like i like my coffee free.
+SAMPLED (temperature 0.7): i love my slaves's favorite joke down.
+
+START:     a computer walks
+GENERATED: a computer walks into a bar... asks the man-"
+CLOSEST TRAINING JOKE (similarity 0.64): a man walks into a bar... he says "ow"
+SAMPLED (temperature 0.7): a computer walks into a bar............... is a million years.
+
+START:     why do programmers
+GENERATED: why do programmers have flat feet? to stomp out forest fires. why do elephants have flat feet? because he was outstanding in his field.
+CLOSEST TRAINING JOKE (similarity 0.74): why do ducks have flat feet? to stomp out forest fires. why do elephants have flat feet? to stomp out flaming ducks.
+SAMPLED (temperature 0.7): why do programmers have a shark? you says, he was on a roll of my hand race out. it's too one.
+
+************ Finish ************
+loading data...
+jokes: 1622 longest: 69 tokens vocabulary: 4687 tokens (95.8% found in GloVe)
+************ Start: GRU ************
+device: cpu
+dataset: short jokes , method: GRU joke generator , setting: train on all jokes, compare generations with them , result: saver , evaluation: next-word metrics, exact match, similarity
+loading data...
+jokes: 1622 longest: 69 tokens vocabulary: 4687 tokens (95.8% found in GloVe)
+method running...
+--start training...
+Epoch: 1 Train Loss: 5.9176 Next-word Accuracy: 0.0997
+Epoch: 2 Train Loss: 5.5671 Next-word Accuracy: 0.1592
+Epoch: 3 Train Loss: 5.2356 Next-word Accuracy: 0.1656
+Epoch: 4 Train Loss: 4.9270 Next-word Accuracy: 0.2171
+Epoch: 5 Train Loss: 4.6626 Next-word Accuracy: 0.2395
+Epoch: 6 Train Loss: 4.4012 Next-word Accuracy: 0.2658
+Epoch: 7 Train Loss: 4.1377 Next-word Accuracy: 0.2852
+Epoch: 8 Train Loss: 3.9159 Next-word Accuracy: 0.3032
+Epoch: 9 Train Loss: 3.6736 Next-word Accuracy: 0.3230
+Epoch: 10 Train Loss: 3.4849 Next-word Accuracy: 0.3395
+Epoch: 11 Train Loss: 3.2797 Next-word Accuracy: 0.3618
+Epoch: 12 Train Loss: 3.0861 Next-word Accuracy: 0.3833
+Epoch: 13 Train Loss: 2.9012 Next-word Accuracy: 0.4042
+Epoch: 14 Train Loss: 2.7311 Next-word Accuracy: 0.4313
+Epoch: 15 Train Loss: 2.5341 Next-word Accuracy: 0.4655
+Epoch: 16 Train Loss: 2.3495 Next-word Accuracy: 0.5004
+Epoch: 17 Train Loss: 2.1752 Next-word Accuracy: 0.5313
+Epoch: 18 Train Loss: 1.9888 Next-word Accuracy: 0.5691
+Epoch: 19 Train Loss: 1.8161 Next-word Accuracy: 0.5979
+Epoch: 20 Train Loss: 1.6544 Next-word Accuracy: 0.6306
+Epoch: 21 Train Loss: 1.5125 Next-word Accuracy: 0.6626
+Epoch: 22 Train Loss: 1.3904 Next-word Accuracy: 0.6874
+Epoch: 23 Train Loss: 1.2598 Next-word Accuracy: 0.7165
+Epoch: 24 Train Loss: 1.1527 Next-word Accuracy: 0.7400
+Epoch: 25 Train Loss: 1.0500 Next-word Accuracy: 0.7655
+Epoch: 26 Train Loss: 0.9644 Next-word Accuracy: 0.7836
+Epoch: 27 Train Loss: 0.8913 Next-word Accuracy: 0.8011
+Epoch: 28 Train Loss: 0.8146 Next-word Accuracy: 0.8184
+Epoch: 29 Train Loss: 0.7526 Next-word Accuracy: 0.8331
+Epoch: 30 Train Loss: 0.6999 Next-word Accuracy: 0.8479
+Epoch: 31 Train Loss: 0.6628 Next-word Accuracy: 0.8548
+Epoch: 32 Train Loss: 0.6097 Next-word Accuracy: 0.8683
+Epoch: 33 Train Loss: 0.5701 Next-word Accuracy: 0.8782
+Epoch: 34 Train Loss: 0.5297 Next-word Accuracy: 0.8877
+Epoch: 35 Train Loss: 0.5070 Next-word Accuracy: 0.8916
+Epoch: 36 Train Loss: 0.4765 Next-word Accuracy: 0.8984
+Epoch: 37 Train Loss: 0.4535 Next-word Accuracy: 0.9031
+Epoch: 38 Train Loss: 0.4374 Next-word Accuracy: 0.9054
+Epoch: 39 Train Loss: 0.4177 Next-word Accuracy: 0.9084
+Epoch: 40 Train Loss: 0.4024 Next-word Accuracy: 0.9111
+--start generating...
+saving results...
+evaluating performance...
+evaluating performance...
+training time: 4848.1 s
+saved learning curve to ../../result/stage_4_result/generation/GRU_learning_curve.png
+************ Overall Performance ************
+GRU next_word_accuracy               0.9510
+GRU next_word_precision_weighted     0.9593
+GRU next_word_recall_weighted        0.9510
+GRU next_word_f1_weighted            0.9509
+GRU next_word_precision_macro        0.9391
+GRU next_word_recall_macro           0.9280
+GRU next_word_f1_macro               0.9275
+GRU exact_match                      0.7643
+GRU similarity                       0.9057
+GRU joke generator: examples (greedy = always the most likely next word)
+
+== Starts that appear in the dataset ==
+START:     what did the
+GENERATED: what did the 0 say to the 8? nice belt.
+CLOSEST TRAINING JOKE (similarity 1.00): what did the 0 say to the 8? nice belt.
+SAMPLED (temperature 0.7): what did the grape say when it got stepped on? nothing, it just gave a little wine
+
+START:     why did the
+GENERATED: why did the chicken cross the road half-way? she wanted to lay it on the line.
+CLOSEST TRAINING JOKE (similarity 1.00): why did the chicken cross the road half-way? she wanted to lay it on the line.
+SAMPLED (temperature 0.7): why did the dinosaur cross the road? because the chicken didn't exist.
+
+START:     what do you
+GENERATED: what do you call a cow with no legs? ground beef.
+CLOSEST TRAINING JOKE (similarity 1.00): what do you call a cow with no legs? ground beef.
+SAMPLED (temperature 0.7): what do you call a horse that lives near you? a neighbor (naybor for pessimist horses)
+
+START:     did you hear
+GENERATED: did you hear about the guy who fell into an upholstery machine? now he's fully recovered.
+CLOSEST TRAINING JOKE (similarity 1.00): did you hear about the guy who fell into an upholstery machine? now he's fully recovered.
+SAMPLED (temperature 0.7): did you hear about the scarecrow who won the nobel prize? he was outstanding in his field. from: http: / / www. dadlaughs. com
+
+START:     how do you
+GENERATED: how do you make a squid laugh? ten tickles.
+CLOSEST TRAINING JOKE (similarity 1.00): how do you make a squid laugh? ten tickles.
+SAMPLED (temperature 0.7): how do you make a squid laugh? ten tickles.
+
+START:     why was the
+GENERATED: why was the tomato blushing? because it saw the salad dressing!
+CLOSEST TRAINING JOKE (similarity 1.00): why was the tomato blushing? because it saw the salad dressing!
+SAMPLED (temperature 0.7): why was the rooster happy after his trip to vegas? he got clucky.
+
+START:     what kind of
+GENERATED: what kind of pants does super mario wear? denim denim denim
+CLOSEST TRAINING JOKE (similarity 1.00): what kind of pants does super mario wear? denim denim denim
+SAMPLED (temperature 0.7): what kind of pants does super mario wear? [ denim, denim, denim. ] (http: / / www. youtube. com / watch? v = c0suimuoshi)
+
+START:     knock knock .
+GENERATED: knock knock... who's there? i did up.
+CLOSEST TRAINING JOKE (similarity 0.81): knock knock... who's there? i did up. i did up-who?
+SAMPLED (temperature 0.7): knock knock... who's there? i did you a job.
+
+== Made-up starts (not necessarily in the dataset) ==
+START:     my dog is
+GENERATED: my dog is an alcoholic... he's not good better.
+CLOSEST TRAINING JOKE (similarity 0.41): why is dr. frankenstein never lonely? he's good at making friends.
+SAMPLED (temperature 0.7): my dog is an she had to found to having a lot of my head. i was driving bike.
+
+START:     the teacher said
+GENERATED: the teacher said to the three unwritten of them of my socks "..." my first years. "
+CLOSEST TRAINING JOKE (similarity 0.36): the three unwritten rules of / r / cleanjokes are: 1. 2. 3.
+SAMPLED (temperature 0.7): the teacher said, a scientist went to a looking out of a remote island? "a dog."
+
+START:     i love my
+GENERATED: i love my cat lemons. he's a real sour puss.
+CLOSEST TRAINING JOKE (similarity 0.92): i feed my cat lemons. he's a real sour puss.
+SAMPLED (temperature 0.7): i love my cat with reading my friends is my head. i'm sure i'm a real sour came into a typo.
+
+START:     a computer walks
+GENERATED: a computer walks into a bar... and says, "what is this beautiful and no?"
+CLOSEST TRAINING JOKE (similarity 0.63): a man walks into a bar... he says "ow"
+SAMPLED (temperature 0.7): a computer walks into a bar... and says, "i'm a beautiful". "what is this beautiful?"
+
+START:     why do programmers
+GENERATED: why do programmers get their wives to get to the other chickens? because they get their too far to get their hand.
+CLOSEST TRAINING JOKE (similarity 0.44): why do jamaican chickens make fun of all the other chickens? because they're jerks.
+SAMPLED (temperature 0.7): why do programmers get to the other chickens? because they have the flat.
+
+************ Finish ************

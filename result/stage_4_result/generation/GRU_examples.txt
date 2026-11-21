@@ -1,0 +1,68 @@
+GRU joke generator: examples (greedy = always the most likely next word)
+
+== Starts that appear in the dataset ==
+START:     what did the
+GENERATED: what did the 0 say to the 8? nice belt.
+CLOSEST TRAINING JOKE (similarity 1.00): what did the 0 say to the 8? nice belt.
+SAMPLED (temperature 0.7): what did the grape say when it got stepped on? nothing, it just gave a little wine
+
+START:     why did the
+GENERATED: why did the chicken cross the road half-way? she wanted to lay it on the line.
+CLOSEST TRAINING JOKE (similarity 1.00): why did the chicken cross the road half-way? she wanted to lay it on the line.
+SAMPLED (temperature 0.7): why did the dinosaur cross the road? because the chicken didn't exist.
+
+START:     what do you
+GENERATED: what do you call a cow with no legs? ground beef.
+CLOSEST TRAINING JOKE (similarity 1.00): what do you call a cow with no legs? ground beef.
+SAMPLED (temperature 0.7): what do you call a horse that lives near you? a neighbor (naybor for pessimist horses)
+
+START:     did you hear
+GENERATED: did you hear about the guy who fell into an upholstery machine? now he's fully recovered.
+CLOSEST TRAINING JOKE (similarity 1.00): did you hear about the guy who fell into an upholstery machine? now he's fully recovered.
+SAMPLED (temperature 0.7): did you hear about the scarecrow who won the nobel prize? he was outstanding in his field. from: http: / / www. dadlaughs. com
+
+START:     how do you
+GENERATED: how do you make a squid laugh? ten tickles.
+CLOSEST TRAINING JOKE (similarity 1.00): how do you make a squid laugh? ten tickles.
+SAMPLED (temperature 0.7): how do you make a squid laugh? ten tickles.
+
+START:     why was the
+GENERATED: why was the tomato blushing? because it saw the salad dressing!
+CLOSEST TRAINING JOKE (similarity 1.00): why was the tomato blushing? because it saw the salad dressing!
+SAMPLED (temperature 0.7): why was the rooster happy after his trip to vegas? he got clucky.
+
+START:     what kind of
+GENERATED: what kind of pants does super mario wear? denim denim denim
+CLOSEST TRAINING JOKE (similarity 1.00): what kind of pants does super mario wear? denim denim denim
+SAMPLED (temperature 0.7): what kind of pants does super mario wear? [ denim, denim, denim. ] (http: / / www. youtube. com / watch? v = c0suimuoshi)
+
+START:     knock knock .
+GENERATED: knock knock... who's there? i did up.
+CLOSEST TRAINING JOKE (similarity 0.81): knock knock... who's there? i did up. i did up-who?
+SAMPLED (temperature 0.7): knock knock... who's there? i did you a job.
+
+== Made-up starts (not necessarily in the dataset) ==
+START:     my dog is
+GENERATED: my dog is an alcoholic... he's not good better.
+CLOSEST TRAINING JOKE (similarity 0.41): why is dr. frankenstein never lonely? he's good at making friends.
+SAMPLED (temperature 0.7): my dog is an she had to found to having a lot of my head. i was driving bike.
+
+START:     the teacher said
+GENERATED: the teacher said to the three unwritten of them of my socks "..." my first years. "
+CLOSEST TRAINING JOKE (similarity 0.36): the three unwritten rules of / r / cleanjokes are: 1. 2. 3.
+SAMPLED (temperature 0.7): the teacher said, a scientist went to a looking out of a remote island? "a dog."
+
+START:     i love my
+GENERATED: i love my cat lemons. he's a real sour puss.
+CLOSEST TRAINING JOKE (similarity 0.92): i feed my cat lemons. he's a real sour puss.
+SAMPLED (temperature 0.7): i love my cat with reading my friends is my head. i'm sure i'm a real sour came into a typo.
+
+START:     a computer walks
+GENERATED: a computer walks into a bar... and says, "what is this beautiful and no?"
+CLOSEST TRAINING JOKE (similarity 0.63): a man walks into a bar... he says "ow"
+SAMPLED (temperature 0.7): a computer walks into a bar... and says, "i'm a beautiful". "what is this beautiful?"
+
+START:     why do programmers
+GENERATED: why do programmers get their wives to get to the other chickens? because they get their too far to get their hand.
+CLOSEST TRAINING JOKE (similarity 0.44): why do jamaican chickens make fun of all the other chickens? because they're jerks.
+SAMPLED (temperature 0.7): why do programmers get to the other chickens? because they have the flat.

@@ -1,0 +1,68 @@
+RNN joke generator: examples (greedy = always the most likely next word)
+
+== Starts that appear in the dataset ==
+START:     what did the
+GENERATED: what did the 0 say to the 8? nice belt.
+CLOSEST TRAINING JOKE (similarity 1.00): what did the 0 say to the 8? nice belt.
+SAMPLED (temperature 0.7): what did the 0 say to the 8? let's make a snowman!
+
+START:     why did the
+GENERATED: why did the strawberry cry? because it saw the salad dressing
+CLOSEST TRAINING JOKE (similarity 0.80): why did the tomato turned red? because it saw the salad dressing
+SAMPLED (temperature 0.7): why did the strawberry get back in the world... why he got a band-def language.
+
+START:     what do you
+GENERATED: what do you call a cow with no legs? ground beef!
+CLOSEST TRAINING JOKE (similarity 1.00): what do you call a cow with no legs? ground beef!
+SAMPLED (temperature 0.7): what do you call a cow with no legs? ground beef.
+
+START:     did you hear
+GENERATED: did you hear about the kidnapping recently? the goatherd woke him up.
+CLOSEST TRAINING JOKE (similarity 1.00): did you hear about the kidnapping recently? the goatherd woke him up.
+SAMPLED (temperature 0.7): did you hear about the kidnapping recently? the goatherd woke him up the street
+
+START:     how do you
+GENERATED: how do you get pikachu on the bus? because he was a bear with the street..............................................
+CLOSEST TRAINING JOKE (similarity 0.42): first post and an original how much does a chinese elephant weigh?.................. wonton
+SAMPLED (temperature 0.7): how do you know you put the right joke in the right thread? he was a little shellfish.
+
+START:     why was the
+GENERATED: why was the rooster happy after his trip to vegas? he wanted to dye his hair as well. bond replied "dye another day.
+CLOSEST TRAINING JOKE (similarity 0.62): why was the rooster happy after his trip to vegas? he got clucky.
+SAMPLED (temperature 0.7): why was the rooster happy after his trip to vegas? he had a dickens of a while arm but it was a patriot blaze
+
+START:     what kind of
+GENERATED: what kind of pants does super mario wear? [ denim, denim, denim, the man says "" i'm at the other, and the other is a bit of the mop.
+CLOSEST TRAINING JOKE (similarity 0.49): what kind of pants does super mario wear? denim denim denim
+SAMPLED (temperature 0.7): what kind of music does super mario wear? [ denim, denim, denim!!
+
+START:     knock knock .
+GENERATED: knock knock. who's there? doorbell technician.
+CLOSEST TRAINING JOKE (similarity 1.00): knock knock. who's there? doorbell technician.
+SAMPLED (temperature 0.7): knock knock. and the 9 years. i don't take the line of a alphabet... i guess it have a mile between the first and last letters.
+
+== Made-up starts (not necessarily in the dataset) ==
+START:     my dog is
+GENERATED: my dog is a bit, for the other is the end of the sail of the fast work............................................
+CLOSEST TRAINING JOKE (similarity 0.40): first post and an original how much does a chinese elephant weigh?.................. wonton
+SAMPLED (temperature 0.7): my dog is a bit of mildew---choo.
+
+START:     the teacher said
+GENERATED: the teacher said he was going to be merely a pigment of summer.
+CLOSEST TRAINING JOKE (similarity 0.43): a man once thought he'd discovered a new primary color but it proved to be merely a pigment of his imagination.
+SAMPLED (temperature 0.7): the teacher said he did the world say to the other, "and is the cost of sex change some plant? he was delighted.
+
+START:     i love my
+GENERATED: i love my slaves like i like my coffee free.
+CLOSEST TRAINING JOKE (similarity 0.91): i like my slaves like i like my coffee free.
+SAMPLED (temperature 0.7): i love my slaves's favorite joke down.
+
+START:     a computer walks
+GENERATED: a computer walks into a bar... asks the man-"
+CLOSEST TRAINING JOKE (similarity 0.64): a man walks into a bar... he says "ow"
+SAMPLED (temperature 0.7): a computer walks into a bar............... is a million years.
+
+START:     why do programmers
+GENERATED: why do programmers have flat feet? to stomp out forest fires. why do elephants have flat feet? because he was outstanding in his field.
+CLOSEST TRAINING JOKE (similarity 0.74): why do ducks have flat feet? to stomp out forest fires. why do elephants have flat feet? to stomp out flaming ducks.
+SAMPLED (temperature 0.7): why do programmers have a shark? you says, he was on a roll of my hand race out. it's too one.

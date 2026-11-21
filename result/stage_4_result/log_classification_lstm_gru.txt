@@ -1,0 +1,54 @@
+loading data...
+train: (25000, 256) test: (25000, 256) vocabulary: 28458 words (99.4% found in GloVe)
+************ Start: LSTM ************
+device: mps
+dataset: IMDb movie reviews , method: LSTM sentiment classifier , setting: pre-partitioned train test , result: saver , evaluation: accuracy, precision, recall, f1
+method running...
+--start training...
+Epoch: 1 Train Loss: 0.3696 Train Accuracy: 0.8517 Test Loss: 0.4009 Test Accuracy: 0.8261
+Epoch: 2 Train Loss: 0.2696 Train Accuracy: 0.9048 Test Loss: 0.3412 Test Accuracy: 0.8587
+Epoch: 3 Train Loss: 0.1820 Train Accuracy: 0.9329 Test Loss: 0.3338 Test Accuracy: 0.8685
+Epoch: 4 Train Loss: 0.1438 Train Accuracy: 0.9486 Test Loss: 0.3222 Test Accuracy: 0.8672
+Epoch: 5 Train Loss: 0.1314 Train Accuracy: 0.9514 Test Loss: 0.3587 Test Accuracy: 0.8646
+Epoch: 6 Train Loss: 0.1195 Train Accuracy: 0.9572 Test Loss: 0.3606 Test Accuracy: 0.8703
+--start testing...
+saving results...
+evaluating performance...
+training time: 128.0 s
+saved learning curve to ../../result/stage_4_result/classification/LSTM_learning_curve.png
+evaluating performance...
+************ Overall Performance ************
+LSTM accuracy           train: 0.9572  test: 0.8703
+LSTM precision          train: 0.9653  test: 0.9036
+LSTM recall             train: 0.9484  test: 0.8291
+LSTM f1                 train: 0.9568  test: 0.8647
+LSTM precision_macro    train: 0.9573  test: 0.8729
+LSTM recall_macro       train: 0.9572  test: 0.8703
+LSTM f1_macro           train: 0.9572  test: 0.8701
+************ Finish ************
+************ Start: GRU ************
+device: cpu
+dataset: IMDb movie reviews , method: GRU sentiment classifier , setting: pre-partitioned train test , result: saver , evaluation: accuracy, precision, recall, f1
+method running...
+--start training...
+Epoch: 1 Train Loss: 0.2825 Train Accuracy: 0.8966 Test Loss: 0.3214 Test Accuracy: 0.8712
+Epoch: 2 Train Loss: 0.2016 Train Accuracy: 0.9272 Test Loss: 0.2857 Test Accuracy: 0.8816
+Epoch: 3 Train Loss: 0.1265 Train Accuracy: 0.9558 Test Loss: 0.2968 Test Accuracy: 0.8815
+Epoch: 4 Train Loss: 0.1071 Train Accuracy: 0.9661 Test Loss: 0.3326 Test Accuracy: 0.8685
+Epoch: 5 Train Loss: 0.0789 Train Accuracy: 0.9731 Test Loss: 0.3520 Test Accuracy: 0.8809
+Epoch: 6 Train Loss: 0.0748 Train Accuracy: 0.9751 Test Loss: 0.3651 Test Accuracy: 0.8801
+--start testing...
+saving results...
+evaluating performance...
+training time: 3172.8 s
+saved learning curve to ../../result/stage_4_result/classification/GRU_learning_curve.png
+evaluating performance...
+************ Overall Performance ************
+GRU accuracy           train: 0.9751  test: 0.8801
+GRU precision          train: 0.9745  test: 0.8903
+GRU recall             train: 0.9758  test: 0.8670
+GRU f1                 train: 0.9751  test: 0.8785
+GRU precision_macro    train: 0.9751  test: 0.8803
+GRU recall_macro       train: 0.9751  test: 0.8801
+GRU f1_macro           train: 0.9751  test: 0.8801
+************ Finish ************
